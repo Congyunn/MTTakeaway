@@ -1,0 +1,48 @@
+.RightBox{
+    position: fixed;
+    width: 124px;
+    height: 257px;
+    background-color: #fff;
+    border-radius: 4px;
+    right: -64px;
+    font-size: 12px;
+    z-index: 999999;
+    bottom: 30px;
+    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+    transition: all .5s;
+}
+.RightBox:hover{
+    right: 0;
+    transition: all .5s;
+}
+
+.Back{
+    cursor: pointer;
+    width: 28px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.Back:hover{
+    color: #ffb40a;
+}
+
+.RightBox .content{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: center;
+    color: #000;
+}
+.QR1{
+    background: url('../../Img/Footer/qrcode1.png') no-repeat;
+    background-size: 100%;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}
+.QR2{
+    background: url('../../Img/Footer/qrcode2.png') no-repeat;
+    background-size: 100%;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+}

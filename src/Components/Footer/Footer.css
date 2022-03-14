@@ -1,0 +1,92 @@
+.FooterBox{
+    background-color: #333;
+    height: 358px;  
+}
+.FooterInfo{
+    align-items: center;
+    width: 100%;
+    height: 287px;
+    position: relative;
+    margin: 0 auto;
+    width: 920px;
+}
+.left{
+    position: absolute;
+    font-size: 14px;
+    color: #aaa;
+    font-family: Microsoft Yahei,Arial,Helvetica,sans-serif;
+    height: 128px;
+    width: 173px;
+    top: 70px;
+    align-items: center;
+}
+.FooterCol1{
+    padding: 0;
+    float: left;
+    display: inline-block;
+    list-style:none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+}
+.FooterCol1 li{
+    margin-bottom: 17px;
+}
+.FooterCol2{
+    padding: 0;
+    float: right;
+    display: inline-block;
+    list-style:none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+}
+.FooterCol2 li{
+    margin-bottom: 17px;
+}
+.MiddleLine{
+    width: 100%;
+    height: 1px;
+    background-color: #666;
+}
+
+.middle{
+    position: absolute;
+    top: 70px;
+    left: 442px;
+}
+.Cooperation{
+    margin-bottom: 30px;
+}
+.title{
+    font-size: 22px;
+    color: #eee;
+    margin-bottom: 12px;
+}
+.content{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.right{
+    float: right;
+    font-size: 22px;
+    color: #eee;
+    margin-top: 60px;
+}
+.QrCode1{
+    display: inline-block;
+    background-image: url('../../Img/Footer/qrcode1.png');
+    background-size: 100%;
+    width: 90px;
+    height: 90px;
+    margin: 10px 16px 10px 0;
+}
+.QrCode2{
+    display: inline-block;
+    background-image: url('../../Img/Footer/qrcode2.png');
+    background-size: 100%;
+    width: 90px;
+    height: 90px;
+    margin: 0 16px 10px 0;
+}

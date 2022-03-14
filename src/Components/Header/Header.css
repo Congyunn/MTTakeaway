@@ -1,0 +1,84 @@
+
+#leftfalse{
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: url(../../Img/Header/logo1.png) no-repeat;
+    background-size: contain;
+    width: 163px;
+    height: 48px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+#lefttrue{
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: url(../../Img/Header/logo.png) no-repeat;
+    background-size: contain;
+    width: 163px;
+    height: 48px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+}
+
+#headerul{
+    display: inline-block;
+    height: 70px;
+    width: 500px;
+    margin-left: 300px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular,Microsoft Yahei,Arial,Helvetica,sans-serif;
+    line-height: 16px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+#headerlifalse{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 40px;
+    color: white;
+}
+#headerlitrue{
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 40px;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.csr-headerfalse{
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    z-index: 99999999;
+}
+.csr-headertrue{
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    z-index: 99999999;
+    background-color: white;
+}
+.header-content{
+    height: 100%;
+    width: 990px;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+}
+.headera:hover{
+    font-weight: 700;
+    padding-bottom:26px;
+    border-bottom: 3px solid #ffbd27;
+}

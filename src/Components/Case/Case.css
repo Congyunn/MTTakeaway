@@ -1,0 +1,288 @@
+.CaseDiv {
+  height: 900px;
+  width: 100%;
+  background-image: linear-gradient(-135deg, #ffd161, #ffbd27);
+}
+.CaseBox {
+  position: relative;
+  top: 140px;
+  margin-left: 260px;
+  height: 900px;
+  width: 980px;
+  height: 360px;
+}
+
+.CaseShowfalse {
+  opacity: 0;
+  background: url(../../Img/Case/caseIntro.png) no-repeat;
+  background-size: 100%;
+  position: relative;
+  left: 50%;
+  width: 309px;
+  height: 135px;
+  transform: translateX(-50%);
+  z-index: 999;
+  top: 90px;
+  animation: CaseEscape 0.5s;
+}
+@keyframes CaseEscape {
+  0% {
+    top: 90px;
+    opacity: 1;
+  }
+  100% {
+    top: 140px;
+    opacity: 0;
+  }
+}
+
+.CaseShowtrue {
+  background: url(../../Img/Case/caseIntro.png) no-repeat;
+  background-size: 100%;
+  position: relative;
+  left: 50%;
+  width: 309px;
+  height: 135px;
+  transform: translateX(-50%);
+  z-index: 999;
+  top: 90px;
+  animation: CaseShow 0.5s;
+}
+@keyframes CaseShow {
+  0% {
+    top: 140px;
+    opacity: 0;
+  }
+  100% {
+    top: 90px;
+    opacity: 1;
+  }
+}
+
+.CaseText{
+    width: 1128px;
+    height: 492px;
+}
+
+.CaseBackgroundfalse{
+  top: 0px;
+  width: 758px;
+  height: 420px;
+  position: absolute;
+  background-image: linear-gradient(39deg,#ff5c49,#ff9f4a);
+  border-radius: 4px;
+  right: 0px;
+  opacity: 0;
+  animation: BackOut 1s;
+}
+@keyframes BackOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.CaseBackgroundtrue{
+  top: 0px;
+  width: 758px;
+  height: 420px;
+  position: absolute;
+  background-image: linear-gradient(39deg,#ff5c49,#ff9f4a);
+  border-radius: 4px;
+  right: -10px;
+  animation: BackIn 1s;
+}
+@keyframes BackIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.CaseStorytrue{
+  position: relative;
+  height: 360px;
+  width: 980px;
+  left: -15px;
+  top: 33px;
+  opacity: 1;
+  animation: TextIn 1s;
+}
+@keyframes TextIn {
+  0% {
+    opacity: 0;
+    top: 83px;
+  }
+  100% {
+    opacity: 1;
+    top: 33px;
+  }
+}
+.CaseStoryfalse{
+  position: relative;
+  height: 360px;
+  width: 980px;
+  left: -15px;
+  top: 33px;
+  opacity: 0;
+  animation: TextOut 1s;
+}
+@keyframes TextOut {
+  0% {
+    opacity: 1;
+    top: 33px;
+  }
+  100% {
+    opacity: 0;
+    top: 83px;
+  }
+}
+.LeftArrow{
+  position: relative;
+  top: 170px;
+  left: -50px;
+  width: 39px;
+  height: 49px;
+  padding: 12px;
+  background: url('../../Img/Case/left.png') no-repeat;
+  background-position: 12px 12px;
+  background-size: 15px 25px;
+  cursor: pointer;
+}
+.RightArrow{
+  position: absolute;
+  top: 170px;
+  right: -100px;
+  width: 39px;
+  height: 49px;
+  padding: 12px;
+  background: url('../../Img/Case/right.png') no-repeat;
+  background-position: 12px 12px;
+  background-size: 15px 25px;
+  cursor: pointer;
+  margin-right: 14px;
+}
+
+.slick-list{
+  position: absolute;
+  height: 360px;
+  width: 980px;
+  top: 0px;
+  overflow: hidden;
+}
+.slick-track{
+  position: absolute;
+  width: 6860px;
+  height: 360px;
+}
+
+.CaseItem-1{
+  display: inline-block;
+  height: 360px;
+  width: 980px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.CaseText-1{
+  display: inline-block;
+  height: 360px;
+  width: 620px;
+  background-color: white;
+  padding: 40px 30px 36px 45px;
+}
+.CaseItem0{
+  display: inline-block;
+  height: 360px;
+  width: 980px;
+  position: absolute;
+  top: 0px;
+  left: 980px;
+  overflow: hidden;
+}
+.CaseText0{
+  display: inline-block;
+  height: 360px;
+  width: 620px;
+  background-color: white;
+  padding: 40px 30px 36px 45px;
+}
+.CaseItem1{
+  display: inline-block;
+  height: 360px;
+  width: 980px;
+  position: absolute;
+  top: 0px;
+  left: 1960px;
+  overflow: hidden;
+}
+.CaseText1{
+  display: inline-block;
+  height: 360px;
+  width: 620px;
+  background-color: white;
+  padding: 40px 30px 36px 45px;
+}
+.CaseItem2{
+  display: inline-block;
+  height: 360px;
+  width: 980px;
+  position: absolute;
+  top: 0px;
+  left: 2940px;
+  overflow: hidden;
+}
+.CaseText2{
+  display: inline-block;
+  height: 360px;
+  width: 620px;
+  background-color: white;
+  padding: 40px 30px 36px 45px;
+}
+
+.ItemH2{
+  font-weight: 510;
+  height: 35px;
+  background-image: url(../../Img/Case/CaseIcon.png);
+  background-repeat: no-repeat;
+  background-size: 30px,33.4px;
+  font-size: 16px;
+}
+.ItemH3{
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.ItemP{
+  margin-top: 16px;
+  font-size: 16px;
+  color: #888;
+  letter-spacing: -.3px;
+  line-height: 28px;
+}
+
+
+.icon_box {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon_box span {
+  display: block;
+  float: left;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.icon_box .active {
+  background: #ff5c49;
+}

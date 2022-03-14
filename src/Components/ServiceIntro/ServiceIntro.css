@@ -1,0 +1,438 @@
+#ServiceBox{
+  top: 622px;
+  height: 1015px;
+  width: 1000px;
+  margin-left: 260px;
+}
+
+
+.ServiceShowfalse {
+  opacity: 0;
+  background: url(../../Img/ServiceIntro/serviceintro.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  width: 390px;
+  height: 127px;
+  transform: translateX(-50%);
+  z-index: 999;
+  top: 800px;
+  animation: ServiceEscape 0.5s;
+}
+@keyframes ServiceEscape {
+  0% {
+    top: 800px;
+    opacity: 1;
+  }
+  100% {
+    top: 850px;
+    opacity: 0;
+  }
+}
+
+.ServiceShowtrue {
+  background: url(../../Img/ServiceIntro/serviceintro.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 50%;
+  width: 390px;
+  height: 127px;
+  transform: translateX(-50%);
+  z-index: 999;
+  top: 800px;
+  animation: ServiceShow 0.5s;
+}
+@keyframes ServiceShow {
+  0% {
+    top: 850px;
+    opacity: 0;
+  }
+  100% {
+    top: 800px;
+    opacity: 1;
+  }
+}
+
+#servicetitle {
+  width: 400px;
+  height: 40px;
+  top: 500px;
+  font-family: PingFangSC-Semibold, Microsoft Yahei, Arial, Helvetica,
+    sans-serif;
+  font-size: 40px;
+  color: #000;
+  line-height: 40px;
+  position: absolute;
+}
+
+.ServiceTexttrue {
+  position: absolute;
+  opacity: 1;
+  top: 500px;
+  animation: ServiceTextShow 0.5s;
+}
+@keyframes ServiceTextShow {
+  0% {
+    opacity: 0;
+    top: 550px;
+  }
+  100% {
+    opacity: 1;
+    top: 500px;
+  }
+}
+.ServiceTextfalse {
+  position: absolute;
+  opacity: 0;
+  top: 500px;
+  animation: ServiceTextEscape 0.5s;
+}
+@keyframes ServiceTextEscape {
+  0% {
+    opacity: 1;
+    top: 500px;
+  }
+  100% {
+    opacity: 0;
+    top: 550px;
+  }
+}
+
+#ServiceUl{
+  padding: 0%;
+  width: 638px;
+  height: 390px;
+  position: absolute;
+  top: 570px;
+}
+#ServiceUl li{
+  width: 400px;
+  height: 85px;
+  margin-bottom: 20px;
+  list-style-type:none;
+}
+@keyframes ChangeFontBig {
+  0% {
+    transform:scale(0.65);
+    transform-origin: 10px 20px;
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+@keyframes ChangeFontSmall {
+  0% {
+    transform:scale(1.54);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+#ServiceText0{
+  margin-top: 50px;
+  background: url(../../Img/ServiceIntro/cook.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceTitle01{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle02{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle03{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle00{
+  position: absolute;
+  left: 60px;
+  color: #ffbd27;
+  font-size: 40px;
+  border-bottom: 5px solid #ffbd27;
+  animation: ChangeFontBig 0.5s;
+}
+#ServiceSubtitle01{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle02{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle03{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle00{
+  display: none;
+}
+
+#ServiceText10{
+  background: url(../../Img/ServiceIntro/cake.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText12{
+  background: url(../../Img/ServiceIntro/cake.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText13{
+  background: url(../../Img/ServiceIntro/cake.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText11{
+  background: url(../../Img/ServiceIntro/cake1.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceTitle10{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle12{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle13{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle11{
+  position: absolute;
+  left: 60px;
+  color: #ffbd27;
+  font-size: 40px;
+  border-bottom: 5px solid #ffbd27;
+  animation: ChangeFontBig 0.5s;
+}
+#ServiceSubtitle10{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle12{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle13{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle11{
+  display: none;
+}
+
+#ServiceText20{
+  background: url(../../Img/ServiceIntro/apple.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText21{
+  background: url(../../Img/ServiceIntro/apple.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText23{
+  background: url(../../Img/ServiceIntro/apple.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText22{
+  background: url(../../Img/ServiceIntro/apple1.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceTitle20{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle21{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle23{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle22{
+  position: absolute;
+  left: 60px;
+  color: #ffbd27;
+  font-size: 40px;
+  border-bottom: 5px solid #ffbd27;
+  animation: ChangeFontBig 0.5s;
+}
+#ServiceSubtitle20{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle21{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle23{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle22{
+  display: none;
+}
+
+#ServiceText30{
+  background: url(../../Img/ServiceIntro/box.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText31{
+  background: url(../../Img/ServiceIntro/box.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText32{
+  background: url(../../Img/ServiceIntro/box.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceText33{
+  background: url(../../Img/ServiceIntro/box1.png) no-repeat;
+  background-size: 40px 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+#ServiceTitle30{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle31{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle32{
+  position: absolute;
+  left: 60px;
+  animation: ChangeFontSmall 0.5s;
+}
+#ServiceTitle33{
+  position: absolute;
+  left: 60px;
+  color: #ffbd27;
+  font-size: 40px;
+  border-bottom: 5px solid #ffbd27;
+  animation: ChangeFontBig 0.5s;
+}
+#ServiceSubtitle30{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle31{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle32{
+  position: absolute;
+  left: 60px;
+  font-size: 16px;
+}
+#ServiceSubtitle33{
+  display: none;
+}
+
+#PhonePart{
+  top: 340px;
+  margin-top: 465px;
+  margin-left: 655px;
+  width: 346px;
+  height: 708px;
+}
+#PhoneOut{
+  background-image: url(../../Img/ServiceIntro/phone.png);
+  background-size: 100%;
+  width: 346px;
+  height: 708px;
+  right: 0
+}
+#PhoneInside0{
+  background-image: url('../../Img/ServiceIntro/meishi.png');
+  background-size: 100%;
+  width: 310px;
+  height: 672px;
+  position: relative;
+  top: 18px;
+  left: 18px;
+  z-index: 999;
+  transition: all 0.5s;
+  
+}
+#PhoneInside1{
+  background-image: url('../../Img/ServiceIntro/tiandian.png');
+  background-size: 100%;
+  width: 310px;
+  height: 672px;
+  position: relative;
+  top: 18px;
+  left: 18px;
+  z-index: 999;
+  transition: all 0.5s;
+}
+#PhoneInside2{
+  background-image: url('../../Img/ServiceIntro/shengxian.png');
+  background-size: 100%;
+  width: 310px;
+  height: 672px;
+  position: relative;
+  top: 18px;
+  left: 18px;
+  z-index: 999;
+  transition: all 0.5s;
+}
+#PhoneInside3{
+  background-image: url('../../Img/ServiceIntro/chaoshi.png');
+  background-size: 100%;
+  width: 310px;
+  height: 672px;
+  position: relative;
+  top: 18px;
+  left: 18px;
+  z-index: 999;
+  transition: all 0.5s;
+}
+

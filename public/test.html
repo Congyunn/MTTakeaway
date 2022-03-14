@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box .swiper_box {
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .box .swiper_box img {
+            display: block;
+            float: left;
+            width: 300px;
+        }
+
+        .box .icon_box {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .box .icon_box span {
+            display: block;
+            float: left;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 3px;
+        }
+
+        .box .icon_box .active {
+            background: sandybrown;
+        }
+
+        .box .prve {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .box .next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="swiper_box">
+            <img src="img/a.jpg" />
+            <img src="img/b.jpg" />
+            <img src="img/c.jpg" />
+            <img src="img/d.jpg" />
+            <img src="img/e.jpg" />
+        </div>
+        <div class="icon_box">
+        </div>
+        <div class="prve">
+            <img src="img/ban_pre.png" />
+        </div>
+        <div class="next">
+            <img src="img/ban_next.png" />
+        </div>
+    </div>
+</body>
+
+<script>
+    //获取图片容器swiper_box
+    var swiper_box = document.querySelector(".swiper_box");
+    //获取所有图片
+    var swiper_img = swiper_box.querySelectorAll("img");
+    //获取小圆点容器icon_box
+    var icon_box = document.querySelector(".icon_box");
+    //获取上一张图片按钮
+    var prve = document.querySelector(".prve");
+    //获取下一张图片按钮
+    var next = document.querySelector(".next");
+    //获取图片总个数
+    var img_conut = swiper_img.length;
+    //获取单个图片长度
+    var img_width = swiper_img[0].width;
+    //获取复制第一张图片节点			
+    var first_img = swiper_img[0].cloneNode(true);
+    //获取复制最后一张图片节点
+    var last_img = swiper_img[img_conut - 1].cloneNode();
+    //定义一个索引变量
+    var index = 1;
+    var Timer;
+
+    /*动态添加小圆点*/
+    //定义一个小圆点变量
+    function icon() {
+        var icon = "";
+        for (var i = 0; i < img_conut; i++) {
+            icon += "<span></span>";
+        }
+        icon_box.innerHTML = icon
+    }
+    icon();
+
+    /*开头插入最后一张图片*/
+    swiper_box.insertBefore(last_img, swiper_box.firstChild);
+    swiper_box.style.left = "-" + img_width + "px";
+    /*最后插入第一张图片*/
+    swiper_box.appendChild(first_img);
+
+    /*设置轮播容器长度为所有图片长度之和*/
+    swiper_box.style.width = img_width * (img_conut + 2) + "px";
+
+    /*小圆点同步轮播图片选中状态*/
+    var icon = icon_box.querySelectorAll("span");
+
+    function activeIcon(index) {
+        for (var i = 0; i < icon.length; i++) {
+            icon[i].className = "";
+        }
+        icon[index].className = "active";
+    }
+    activeIcon(index - 1);
+    /*点击小圆点显示相应的图片*/
+    for (var i = 0; i < icon.length; i++) {
+        icon[i].index = i
+        icon[i].onclick = function () {
+            index = this.index;
+            next.onclick();
+            activeIcon(index - 1);
+        }
+    }
+
+    /*点击下一张图片按钮*/
+    next.onclick = function () {
+        index++;
+        openTransition()
+        indexShow()
+        if (index > img_conut) {
+            index = 1;
+            activeIcon(index - 1)
+            setTimeout(function () {
+                closeTransition()
+                indexShow()
+            }, 600)
+        } else {
+            activeIcon(index - 1)
+        }
+    }
+
+    /*点击上一张图片按钮*/
+    prve.onclick = function () {
+        index--;
+        openTransition()
+        indexShow()
+        if (index < 1) {
+            index = img_conut;
+            activeIcon(index - 1)
+            setTimeout(function () {
+                closeTransition()
+                indexShow()
+            }, 600)
+        } else {
+            activeIcon(index - 1)
+        }
+    }
+
+    /*开启动画*/
+    Timer = setInterval(next.onclick, 1500);
+
+    /*鼠标放到容器上停止动画*/
+    document.querySelector(".box").onmouseover = function () {
+        clearInterval(Timer);
+    }
+    /*鼠标移开开始动画*/
+    document.querySelector(".box").onmouseout = function () {
+        Timer = setInterval(next.onclick, 1500);
+    }
+
+    /*开启过度效果*/
+    function openTransition() {
+        swiper_box.style.transition = "all .6s";
+    }
+
+    /*关闭过度效果*/
+    function closeTransition() {
+        swiper_box.style.transition = "none";
+    }
+
+    /*滚动到index相应的位置*/
+    function indexShow() {
+        swiper_box.style.left = "-" + index * img_width + "px";
+    }
+</script>
+
+</html>
